@@ -1,0 +1,19 @@
+.data {
+  padding-left: 30px;
+}
+
+li {
+  list-style-type: none;
+}
+
+input {
+  width: 400px;
+}
+
+textarea {
+  width: 400px;
+}
+
+.displai_none {
+  display: none;
+}
