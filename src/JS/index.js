@@ -6,18 +6,19 @@ import Coments from './containers/app';
 import { createStore } from 'redux';
 import coments from './reducers/index';
 
-if(!localStorage.comentsList){
+let initialState;
 
-  localStorage.setItem('comentsList', JSON.stringify([{
+if(!localStorage.comentsList){
+  initialState = [{
     id: 0,
     author: "First",
     textComent: "textComenttextComent",
     data: "15.10.2020,14:00:00",
     display: false}   
-   ]))
+   ]
+} else {
+  initialState =  JSON.parse(localStorage.comentsList)
 }  
-
-const initialState =  JSON.parse(localStorage.comentsList)
 
 const store = createStore( coments, initialState )
 
